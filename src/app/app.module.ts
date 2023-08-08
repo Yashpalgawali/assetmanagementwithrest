@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EditcompanyComponent } from './MyComponents/Company/editcompany/editcompany.component';
 import { ViewcompanyComponent } from './MyComponents/Company/viewcompany/viewcompany.component';
+import { AdddepartmentComponent } from './MyComponents/Department/adddepartment/adddepartment.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ViewcompanyComponent } from './MyComponents/Company/viewcompany/viewcom
     AppComponent,
     AddcompanyComponent,
     ViewcompanyComponent,
-    EditcompanyComponent
+    EditcompanyComponent,
+    AdddepartmentComponent
   ],
   imports: [
     BrowserModule,
