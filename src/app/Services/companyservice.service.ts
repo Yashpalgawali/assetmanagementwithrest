@@ -23,7 +23,7 @@ export class CompanyserviceService {
     return this.http.post<Company>(`${this.baseUrl}`,company);
   }
 
-  public getCompanyById(cid : number):Observable<Company>
+  public getCompanyById(cid : any):Observable<Company>
   {
     return this.http.get<Company>(`${this.baseUrl}${cid}`);
   }

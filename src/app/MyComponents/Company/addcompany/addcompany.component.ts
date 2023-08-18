@@ -18,7 +18,7 @@ export class AddcompanyComponent implements OnInit {
   }
 
    onSubmit() {
-    this.compserv.saveCompany(this.company).subscribe(data=>this.gotToViewCompany()),(error : any )=>console.error(error);
+      this.compserv.saveCompany(this.company).subscribe(data=>this.gotToViewCompany()),(error : any )=>console.error(error);
    }
   
   gotToViewCompany() {

@@ -10,6 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditcompanyComponent } from './MyComponents/Company/editcompany/editcompany.component';
 import { ViewcompanyComponent } from './MyComponents/Company/viewcompany/viewcompany.component';
 import { AdddepartmentComponent } from './MyComponents/Department/adddepartment/adddepartment.component';
+import { ViewdepartmentsComponent } from './MyComponents/Department/viewdepartments/viewdepartments.component';
+import { EditdepartmentComponent } from './MyComponents/Department/editdepartment/editdepartment.component';
+import { AdddesignationComponent } from './MyComponents/Designation/adddesignation/adddesignation.component';
+import { ViewdesignationComponent } from './MyComponents/Designation/viewdesignation/viewdesignation.component';
+import { EditdesignationComponent } from './MyComponents/Designation/editdesignation/editdesignation.component';
 
 
 @NgModule({
@@ -18,7 +23,12 @@ import { AdddepartmentComponent } from './MyComponents/Department/adddepartment/
     AddcompanyComponent,
     ViewcompanyComponent,
     EditcompanyComponent,
-    AdddepartmentComponent
+    AdddepartmentComponent,
+    ViewdepartmentsComponent,
+    EditdepartmentComponent,
+    AdddesignationComponent,
+    ViewdesignationComponent,
+    EditdesignationComponent
   ],
   imports: [
     BrowserModule,
