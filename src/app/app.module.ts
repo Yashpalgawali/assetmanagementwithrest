@@ -15,6 +15,12 @@ import { EditdepartmentComponent } from './MyComponents/Department/editdepartmen
 import { AdddesignationComponent } from './MyComponents/Designation/adddesignation/adddesignation.component';
 import { ViewdesignationComponent } from './MyComponents/Designation/viewdesignation/viewdesignation.component';
 import { EditdesignationComponent } from './MyComponents/Designation/editdesignation/editdesignation.component';
+import { AddassettypeComponent } from './MyComponents/AssetType/addassettype/addassettype.component';
+import { ViewassettypesComponent } from './MyComponents/AssetType/viewassettypes/viewassettypes.component';
+import { EditassettypeComponent } from './MyComponents/AssetType/editassettype/editassettype.component';
+import { AddassetComponent } from './MyComponents/Assets/addasset/addasset.component';
+import { ViewassetComponent } from './MyComponents/Assets/viewasset/viewasset.component';
+import { EditassetComponent } from './MyComponents/Assets/editasset/editasset.component';
 
 
 @NgModule({
@@ -28,7 +34,13 @@ import { EditdesignationComponent } from './MyComponents/Designation/editdesigna
     EditdepartmentComponent,
     AdddesignationComponent,
     ViewdesignationComponent,
-    EditdesignationComponent
+    EditdesignationComponent,
+    AddassettypeComponent,
+    ViewassettypesComponent,
+    EditassettypeComponent,
+    AddassetComponent,
+    ViewassetComponent,
+    EditassetComponent
   ],
   imports: [
     BrowserModule,

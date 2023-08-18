@@ -6,9 +6,12 @@ import { EditcompanyComponent } from './MyComponents/Company/editcompany/editcom
 import { AdddepartmentComponent } from './MyComponents/Department/adddepartment/adddepartment.component';
 import { ViewdepartmentsComponent } from './MyComponents/Department/viewdepartments/viewdepartments.component';
 import { EditdepartmentComponent } from './MyComponents/Department/editdepartment/editdepartment.component';
-import { AdddesignationComponent } from './MyComponents/Designation/adddesignation/adddesignation.component';
+import { AdddesignationComponent }  from './MyComponents/Designation/adddesignation/adddesignation.component';
 import { ViewdesignationComponent } from './MyComponents/Designation/viewdesignation/viewdesignation.component';
 import { EditdesignationComponent } from './MyComponents/Designation/editdesignation/editdesignation.component';
+import { AddassettypeComponent }    from './MyComponents/AssetType/addassettype/addassettype.component';
+import { EditassettypeComponent } from './MyComponents/AssetType/editassettype/editassettype.component';
+import { ViewassettypesComponent } from './MyComponents/AssetType/viewassettypes/viewassettypes.component';
 
 
 const routes: Routes = [
@@ -20,7 +23,10 @@ const routes: Routes = [
   { path : "editdeptbyid/:id", component : EditdepartmentComponent },
   { path : "adddesignation" , component : AdddesignationComponent},
   { path : "viewdesignations" , component : ViewdesignationComponent},
-  { path : "editdesigbyid/:id", component : EditdesignationComponent }
+  { path : "editdesigbyid/:id", component : EditdesignationComponent },
+  { path : "addassettype" , component : AddassettypeComponent},
+  { path : "viewassettypes", component : ViewassettypesComponent },
+  { path : "editassettypebyid/:id", component : EditassettypeComponent }
   
 ];
 
