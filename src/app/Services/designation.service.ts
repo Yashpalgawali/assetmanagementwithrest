@@ -11,7 +11,8 @@ export class DesignationService {
   designation  : Designation = new Designation();
   constructor(private http: HttpClient) { }
   
-  base_url= 'http://localhost:7979/designation/';
+  //base_url= 'http://localhost:7979/designation/';
+  base_url= "http://mycodenet.jvmhost.net/newassetmanagementwithrest/designation/";
 
   public saveDesignation(designation : Designation):Observable<Designation[]>
   {
