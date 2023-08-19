@@ -10,8 +10,8 @@ import { Observable } from 'rxjs';
 export class CompanyserviceService {
 
   company : Company = new Company();
-
-  baseUrl = "http://localhost:7979/company/";
+  baseUrl = "http://mycodenet.jvmhost.net/assetmanagement/company/";
+//  baseUrl = "http://localhost:7979/company/";
   constructor(private http: HttpClient) { }
 
   public getAllCompanies():Observable<Company[]>{

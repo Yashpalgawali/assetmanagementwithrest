@@ -12,6 +12,9 @@ import { EditdesignationComponent } from './MyComponents/Designation/editdesigna
 import { AddassettypeComponent }    from './MyComponents/AssetType/addassettype/addassettype.component';
 import { EditassettypeComponent } from './MyComponents/AssetType/editassettype/editassettype.component';
 import { ViewassettypesComponent } from './MyComponents/AssetType/viewassettypes/viewassettypes.component';
+import { AddassetComponent } from './MyComponents/Assets/addasset/addasset.component';
+import { ViewassetComponent } from './MyComponents/Assets/viewasset/viewasset.component';
+import { EditassetComponent } from './MyComponents/Assets/editasset/editasset.component';
 
 
 const routes: Routes = [
@@ -26,7 +29,10 @@ const routes: Routes = [
   { path : "editdesigbyid/:id", component : EditdesignationComponent },
   { path : "addassettype" , component : AddassettypeComponent},
   { path : "viewassettypes", component : ViewassettypesComponent },
-  { path : "editassettypebyid/:id", component : EditassettypeComponent }
+  { path : "editassettypebyid/:id", component : EditassettypeComponent },
+  { path : "addasset" , component : AddassetComponent},
+  { path : "viewassets" , component : ViewassetComponent},
+  { path : "editassetbyid/:id" , component : EditassetComponent}
   
 ];
 

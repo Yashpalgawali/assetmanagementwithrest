@@ -38,7 +38,7 @@ export class EditdepartmentComponent implements OnInit {
   public updateDepartment()
   {
     alert("department Object \n Dept_id "+this.department.dept_id+" \n Name = "+this.department.dept_name+"\n Company = "+this.department.company);
-    this.deptserv.updateDepartment(this.department);
+    this.deptserv.updateDepartment(this.department).subscribe(data=>this.gotoviewDepartments());
   }
 
   gotoviewDepartments()

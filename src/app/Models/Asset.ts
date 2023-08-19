@@ -1,8 +1,12 @@
 import { AssetType } from "./AssetType";
 
+
 export class Asset{
-    assettype   : AssetType = new AssetType();
-    asset_id   !: number
-    asset_name !: string
-    type_id    !: number
+    atype         : AssetType = new AssetType();
+    asset_id     !: number
+    asset_name   !: string
+    asset_number !: string
+    model_number !:string
+    quantity     !: string
+    type_id      !: number
  }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { data } from 'jquery';
+import { AssetService } from 'src/app/Services/asset.service';
 
 @Component({
   selector: 'app-viewasset',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewassetComponent implements OnInit {
 
-  constructor() { }
+  assetlist :any;
+  constructor(private assetserv : AssetService,private route : Router) { }
 
   ngOnInit(): void {
+    this.assetserv.getAllAssets().subscribe(data=>this.assetlist=data);
+  }
+  
+  public getAssetByAssetId(asset_id : number)
+  {
+      this.route.navigate(['editassetbyid',asset_id]);
   }
 
 }

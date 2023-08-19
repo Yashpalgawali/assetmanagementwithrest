@@ -1,1 +1,47 @@
-<p>editasset works!</p>
+<div class="container">
+    <!-- start: PAGE HEADER -->
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- start: PAGE TITLE & BREADCRUMB -->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="/"><i class="fa fa-home"></i>&nbsp;Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Add Asset</li>
+            </ol>
+        </div>
+    </div>
+    <form (ngSubmit)="OnSubmit()" method="post" > 
+         <div class="card">
+            <div class="card-header"><h4>Add Asset</h4></div>
+            <div class="card-body">
+            <div class="form-group">
+              <label for="atype">Asset Type</label>
+              <input type="hidden" name="asset_id" [(ngModel)]="asset.asset_id"/>
+                <select id="atype" name="atype" class="form-control mb-3" [(ngModel)]="asset.atype" >
+                    <option selected disabled>Select Asset Type</option>
+                        <option *ngFor="let atype of atypelist"  value="{{atype.type_id}}"> {{atype.type_name}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="asset_name">Asset Name</label>
+                <input class="form-control mb-3" type="text" id="asset_name" name="asset_name" [(ngModel)]="asset.asset_name" placeholder="Enter Asset Name" required/>
+            </div>
+            <div class="form-group">
+              <label for="asset_number">Asset Number</label>
+                <input class="form-control mb-3" type="text" id="asset_number" name="asset_number" [(ngModel)]="asset.asset_number" placeholder="Enter Asset Number" required>
+            </div>
+            <div class="form-group">
+              <label for="model_number">Model Number</label>
+                <input class="form-control mb-3" type="text" id="model_number" name="model_number" [(ngModel)]="asset.model_number" placeholder="Enter Model Number" required >
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+                <input class="form-control mb-3" type="text" id="quantity" name="quantity"  [(ngModel)]="asset.quantity" placeholder="Enter Quantity" required >
+            </div>
+                <input type="submit" class="btn btn-primary" value="Submit"/>
+                <input type="reset" class="btn btn-primary" value="RESET"/>
+            </div>	
+        </div>	
+    </form>
+</div>

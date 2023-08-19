@@ -12,22 +12,20 @@ export class DepartmentserviceService {
 
   constructor(private http: HttpClient) { }
 
-  base_url="http://localhost:7979/department/";
+  //base_url ="http://localhost:7979/department/";
+  base_url = "http://mycodenet.jvmhost.net/assetmanagement/department/";
 
   public saveDepartment(department : Department):Observable<Department[]>
   {
-    
     return this.http.post<Department[]>(`${this.base_url}`,department);
   }
 
   public updateDepartment(department : Department):Observable<Department[]>
   {
-    alert("inside dept service "+department.company+"\n Dept Name = "+department.dept_name);
-
+    //alert("inside dept service "+department.company+"\n Dept Name = "+department.dept_name);
     return this.http.put<Department[]>(`${this.base_url}updatedepartment`,department);
   }
 
-  
   public getAllDepartments():Observable<Department[]>
   {
     return this.http.get<Department[]>(`${this.base_url}`);
