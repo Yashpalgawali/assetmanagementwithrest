@@ -7,6 +7,8 @@ import { AddcompanyComponent } from './MyComponents/Company/addcompany/addcompan
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+
 import { EditcompanyComponent } from './MyComponents/Company/editcompany/editcompany.component';
 import { ViewcompanyComponent } from './MyComponents/Company/viewcompany/viewcompany.component';
 import { AdddepartmentComponent } from './MyComponents/Department/adddepartment/adddepartment.component';
@@ -21,6 +23,7 @@ import { EditassettypeComponent } from './MyComponents/AssetType/editassettype/e
 import { AddassetComponent } from './MyComponents/Assets/addasset/addasset.component';
 import { ViewassetComponent } from './MyComponents/Assets/viewasset/viewasset.component';
 import { EditassetComponent } from './MyComponents/Assets/editasset/editasset.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import { EditassetComponent } from './MyComponents/Assets/editasset/editasset.co
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

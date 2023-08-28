@@ -4,6 +4,7 @@ import { Department } from '../Models/Department';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { data } from 'jquery';
+import { GlobalComponents } from '../Global-Components';
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +12,10 @@ import { data } from 'jquery';
 export class DepartmentserviceService {
 
   constructor(private http: HttpClient) { }
-
-  //base_url ="http://localhost:7979/department/";
-  base_url = "http://mycodenet.jvmhost.net/assetmanagement/department/";
-
+  appurl  : any = GlobalComponents.appUrl;
+              
+  base_url  = this.appurl+"department/";
+  
   public saveDepartment(department : Department):Observable<Department[]>
   {
     return this.http.post<Department[]>(`${this.base_url}`,department);

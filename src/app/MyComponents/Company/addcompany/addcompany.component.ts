@@ -15,6 +15,7 @@ export class AddcompanyComponent implements OnInit {
   constructor(private compserv : CompanyserviceService,private router : Router) { }
 
   ngOnInit(): void {
+    
   }
 
    onSubmit() {

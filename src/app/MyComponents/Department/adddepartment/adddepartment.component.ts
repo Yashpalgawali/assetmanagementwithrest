@@ -13,20 +13,21 @@ import { DepartmentserviceService } from 'src/app/Services/departmentservice.ser
 })
 export class AdddepartmentComponent implements OnInit {
 
-  company : Company = new Company();
-  complist !:  any;
-  department : Department = new Department();
-  deplist !: any;
+  company   : Company = new Company();
+  complist !: any;
+  department: Department = new Department();
+  deplist  !: any;
   constructor(private compserv : CompanyserviceService,private deptserv : DepartmentserviceService, private route : Router) { }
 
   ngOnInit(): void {
     this.compserv.getAllCompanies().subscribe(data=>{this.complist=data});
-   // this.deplist.getAllDepartments().subscribe(data);
   }
 
   OnSubmit() {
-    this.compserv.getCompanyById(this.department.company).subscribe(data=>this.company=data);
-    this.deptserv.saveDepartment(this.department).subscribe(data=>{this.gotoViewDepartments()});
+    
+    this.compserv.getCompanyById(this.department.company).subscribe(data=>this.department.company);
+    alert("Department data is "+this.department.dept_name+"\n Company id is "+this.department.company);
+    //this.deptserv.saveDepartment(this.department).subscribe(data=>{this.gotoViewDepartments()});
   }
   
   gotoViewDepartments() {

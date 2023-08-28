@@ -1,5 +1,5 @@
 export class Company
 {
     comp_id !: number
-    comp_name !: any
+    comp_name !: string
 }

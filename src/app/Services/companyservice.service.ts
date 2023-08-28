@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Company } from '../Models/Company';
 import { Observable } from 'rxjs';
-
+import { GlobalComponents } from '../Global-Components';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +10,10 @@ import { Observable } from 'rxjs';
 export class CompanyserviceService {
 
   company : Company = new Company();
-  baseUrl = "http://mycodenet.jvmhost.net/assetmanagement/company/";
-//  baseUrl = "http://localhost:7979/company/";
+  appurl  : any = GlobalComponents.appUrl;
+  
+  baseUrl = this.appurl+"company/";
+ 
   constructor(private http: HttpClient) { }
 
   public getAllCompanies():Observable<Company[]>{
