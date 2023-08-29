@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DepartmentserviceService } from 'src/app/Services/departmentservice.service';
 import { EmployeeService } from 'src/app/Services/employee.service';
 
@@ -9,7 +10,7 @@ import { EmployeeService } from 'src/app/Services/employee.service';
 })
 export class ViewemployeeComponent implements OnInit {
 
-  constructor(private deptserv : DepartmentserviceService,private empserv: EmployeeService) { }
+  constructor(private deptserv : DepartmentserviceService,private empserv: EmployeeService, private router : Router) { }
   emplist : any
   ngOnInit(): void {
     this.empserv.getAllEmployees().subscribe(data=>this.emplist=data);
@@ -17,7 +18,7 @@ export class ViewemployeeComponent implements OnInit {
 
   getEmpById(empid :number)
   {
-
+    this.router.navigate(['editempbyid',empid]);
   }
 
 }

@@ -24,4 +24,8 @@ export class EmployeeService {
     return this.http.get<Employee[]>(`${this.base_url}`);
   }
 
+  public getEmpById(eid :number):Observable<Employee>
+  {
+    return this.http.get<Employee>(`${this.base_url}${eid}`);
+  }
 }
