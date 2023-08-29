@@ -15,6 +15,9 @@ import { ViewassettypesComponent } from './MyComponents/AssetType/viewassettypes
 import { AddassetComponent } from './MyComponents/Assets/addasset/addasset.component';
 import { ViewassetComponent } from './MyComponents/Assets/viewasset/viewasset.component';
 import { EditassetComponent } from './MyComponents/Assets/editasset/editasset.component';
+import { AddemployeeComponent } from './MyComponents/Employee/addemployee/addemployee.component';
+import { ViewemployeeComponent } from './MyComponents/Employee/viewemployee/viewemployee.component';
+import { EditemployeeComponent } from './MyComponents/Employee/editemployee/editemployee.component';
 
 
 const routes: Routes = [
@@ -32,7 +35,11 @@ const routes: Routes = [
   { path : "editassettypebyid/:id", component : EditassettypeComponent },
   { path : "addasset" , component : AddassetComponent},
   { path : "viewassets" , component : ViewassetComponent},
-  { path : "editassetbyid/:id" , component : EditassetComponent}
+  { path : "editassetbyid/:id" , component : EditassetComponent},
+  { path : "addemployee" , component : AddemployeeComponent} ,
+  { path : "viewemployee", component : ViewemployeeComponent },
+  { path : "editempbyid/:id", component : AddemployeeComponent }
+
   
 ];
 

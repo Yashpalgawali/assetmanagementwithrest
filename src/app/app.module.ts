@@ -24,7 +24,9 @@ import { AddassetComponent } from './MyComponents/Assets/addasset/addasset.compo
 import { ViewassetComponent } from './MyComponents/Assets/viewasset/viewasset.component';
 import { EditassetComponent } from './MyComponents/Assets/editasset/editasset.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { AddemployeeComponent } from './MyComponents/Employee/addemployee/addemployee.component';
+import { ViewemployeeComponent } from './MyComponents/Employee/viewemployee/viewemployee.component';
+import { EditemployeeComponent } from './MyComponents/Employee/editemployee/editemployee.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     EditassettypeComponent,
     AddassetComponent,
     ViewassetComponent,
-    EditassetComponent
+    EditassetComponent,
+    AddemployeeComponent,
+    ViewemployeeComponent,
+    EditemployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     HttpClientModule,
     NgbModule
+    
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

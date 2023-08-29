@@ -26,22 +26,14 @@
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/datatables.net-dt/css/jquery.dataTables.css"
-              
             ],
             "scripts": [
-<<<<<<< HEAD
               "node_modules/jquery/dist/jquery.js",
               "node_modules/popper.js/dist/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
              
               "node_modules/datatables.net/js/jquery.dataTables.js"
             ] 
-=======
-               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
->>>>>>> 7879667c6526036d0166b37a446b1c009a9d3e02
           },
           "configurations": {
             "production": {

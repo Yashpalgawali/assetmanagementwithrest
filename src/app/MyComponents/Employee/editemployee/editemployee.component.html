@@ -1,0 +1,59 @@
+<div class="container">
+	<!-- start: PAGE HEADER -->
+		<div class="row">
+			<div class="col-sm-12">
+				<!-- start: PAGE TITLE & BREADCRUMB -->
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Add Employee</li>
+				</ol>
+			</div>
+		</div>
+		<form (ngSubmit)="OnSubmit()" method="post">
+			<div class="card">
+				<div class="card-header"><h4>Assign Asset</h4></div>
+				
+				<div class="card-body">
+					<div class="form-group">
+						<label for="emp_name">Employee Name</label>
+							<input class="form-control mb-3" type="text" id="emp_name" name="emp_name" ([ngModel]="emp_name")  placeholder="Enter Employee Name" required />
+					</div>
+					<div class="form-group">
+						<label for="emp_email">Email</label> 
+							<input class="form-control mb-3" type="email" id="emp_email" name="emp_email" ([ngModel]="emp_email") placeholder="Enter Email address" required />
+					</div>
+					<div class="form-group">
+						<label for="emp_contact">Contact</label> 
+							<input class="form-control mb-3" type="text" id="emp_contact" name="emp_contact" ([ngModel]="emp_contact") placeholder="Enter contact of the employee" required />
+					</div>
+					<div class="form-group  ">
+						<label for="designation">Designation</label> 
+						<select class="form-control mb-3"  id="designation" name="designation" >
+						   <option selected disabled>Please Select Designation</option>
+							<option *ngFor="let desig of desiglist" value="{{desig.desig_id}}"> {{desig.desig_name}}</option>
+						</select>
+					</div>
+					<div class="form-group ">
+						<label for="company">Company </label> 
+							<select class="form-control mb-3" id="company" name="company" onchange="getdeptbycompid(this.value)">
+								<option selected disabled>Please Select Company</option>
+                                <option *ngFor="let comp of complist" value="{{comp.comp_id}}"> {{comp.comp_name}}</option>
+							</select>
+					</div>
+					<div class="form-group ">
+						<label for="department">Department</label> 
+							<select class="form-control mb-3" id="department" name="department">
+								<option selected disabled>Please Select Department</option>
+							</select>
+					</div>
+					<div class="form-group">
+						<label for="multi_assets">Assets</label> 
+						<select class="form-control mb-3"  id="multi_assets" name="multi_assets" multiple="multiple">
+						</select>
+					</div>
+                    
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>

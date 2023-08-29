@@ -1,0 +1,47 @@
+<div class="container" style="margin-top: 80px;">
+	
+    <!-- start: PAGE HEADER -->
+        <div class="row">
+            <div class="col-sm-12">
+                
+                <!-- start: PAGE TITLE & BREADCRUMB -->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#"> <i class="fa fa-home"></i>&nbsp;Home</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Add Employee</li>
+                </ol>
+            </div>
+        </div>
+           
+      <table   class="table" id="emptable">
+        <thead>
+            <tr>
+                <th>Sr No.</th>
+                <th>Employee Name</th>
+                <th>Employee Email</th>
+                <th>Contact</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th>Company</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of emplist ">
+                <td>{{emp.emp_id}}</td>
+                <td>{{emp.emp_name}}</td>
+                <td>{{emp.emp_email}}</td>
+                <td>{{emp.emp_contact}}</td>
+                <td>{{emp.designation.desig_name }}</td>
+                <td>{{emp.department.dept_name }}</td>
+                <td>{{emp.department.company.comp_name}}</td>
+                <td>
+                    <button (click)="getEmpById(emp.emp_id)" class="btn btn-primary" ><i class="fa fa-edit"></i>&nbsp; Edit</button>&nbsp; 
+                    <button (click)="getEmpById(emp.emp_id)" class="btn btn-primary" ><i class="fa fa-eye"></i>&nbsp; History</button> &nbsp;
+                    <button (click)="getEmpById(emp.emp_id)" class="btn btn-primary" ><i class="fa fa-edit"></i>&nbsp; Edit</button> 
+                </td>
+            </tr>
+        </tbody>
+      </table>
+   </div>
