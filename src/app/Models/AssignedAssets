@@ -1,0 +1,21 @@
+
+import { Employee } from '../Models/Employee';
+import { Asset } from '../Models/Asset';
+
+export class AssignedAssets {
+    assigned_asset_id !:number
+    assign_date !: string
+    assign_time !: string
+    assigned_assets  !: string
+    ass_assets  !:string[]
+    assigned_asset_types !: string[]
+    assigned !:string
+    assigned_types !: string
+    model_numbers  !: string
+    asset_id    !: number
+    emp_id !: number
+    multi_assets !: string
+    employee !: Employee
+    asset !: Asset
+}
+

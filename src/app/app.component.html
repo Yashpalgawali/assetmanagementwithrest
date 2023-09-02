@@ -1,0 +1,75 @@
+
+<nav class="navbar navbar-expand-md navbar-light bg-light  fixed-top ">
+  <!--   <a class="navbar-brand  " routerLink=" "><img  src=  " img/savera_logo.jpg}  "id="c_logo  "></a> -->
+      
+      <button class="navbar-toggler  "type="button  "data-toggle="collapse  "data-target="#collapsibleNavbar  ">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    <div class="collapse navbar-collapse  "id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        
+      <li class="nav-item"><a class="nav-link active" href="/"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+       
+      <li ngbDropdown class="nav-item dropdown">
+      	<a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Company</a>
+      	 <ul ngbDropdownMenu class="dropdown-menu">
+      	 	<li><a ngbDropdownItem class="dropdown-item" routerLink ="addcompany">Add Company</a></li>
+      	 	 <li><a  ngbDropdownItem class="dropdown-item" routerLink="viewcompany">View Company</a></li>
+      	 </ul>
+      </li>
+
+      <li ngbDropdown class="nav-item dropdown">
+      	<a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Department</a>
+      	 <ul ngbDropdownMenu class="dropdown-menu">
+      	 	<li><a ngbDropdownItem class="dropdown-item" routerLink="adddepartment">Add Department</a></li>
+      	 	 <li><a ngbDropdownItem class="dropdown-item" routerLink="viewdepartment">View Department</a></li>
+      	 </ul>
+      </li>
+      <li ngbDropdown class="nav-item dropdown">
+      	<a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Asset Type</a>
+      	 <ul ngbDropdownMenu class="dropdown-menu">
+      	 	<li><a ngbDropdownItem class="dropdown-item" routerLink="addassettype">Add Asset Type</a></li>
+      	 	 <li><a ngbDropdownItem class="dropdown-item" routerLink="viewassettypes">View Asset Type</a></li>
+      	 </ul>
+      </li> 
+
+      <li ngbDropdown class="nav-item dropdown">
+      	<a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Asset</a>
+      	 <ul ngbDropdownMenu class="dropdown-menu">
+      	 	<li><a ngbDropdownItem class="dropdown-item" routerLink="addasset">Add Asset </a></li>
+      	 	 <li><a ngbDropdownItem class="dropdown-item" routerLink="viewassets">View Assets</a></li>
+      	 </ul>
+      </li>
+      
+      <li ngbDropdown class="nav-item dropdown">
+      	<a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Employee</a>
+      	 <ul ngbDropdownMenu class="dropdown-menu">
+      	 	<li><a ngbDropdownItem class="dropdown-item" routerLink="addemployee">Add Employee </a></li>
+      	 	 <li><a ngbDropdownItem class="dropdown-item" routerLink="viewemployee">View Employee</a></li>
+      	 </ul>
+      </li>
+      <li  >
+        <ul>
+          <li><a  class="nav-link" routerLink="viewassignedassets">View Assigned Assets</a></li>
+        </ul>
+      </li> 
+      <li ngbDropdown class="nav-item dropdown">
+        <a ngbDropdownToggle class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Welcome&nbsp;</a>
+         <ul ngbDropdownMenu class="dropdown-menu">
+         <li><a ngbDropdownItem class="dropdown-item" routerLink="changepass"><i class="fas fa-cog"></i>&nbsp;Change Password</a></li>
+         <hr>
+           <li><a ngbDropdownItem class="dropdown-item" routerLink="logout"><i class="fas fa-power-off"></i>&nbsp;Logout</a></li>
+         </ul>
+      </li>
+
+      </ul>
+    </div>
+   </nav>
+ 
+<router-outlet></router-outlet>
+<footer class="footer">
+  <div class="container">
+    <span>All Rights Reserved @Company</span>
+  </div>
+</footer>
