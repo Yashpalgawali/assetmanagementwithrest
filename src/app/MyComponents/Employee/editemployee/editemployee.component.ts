@@ -28,7 +28,7 @@ export class EditemployeeComponent implements OnInit {
       this.emp_id = this.route.snapshot.params['id'];
       this.empserv.getEmpById(this.emp_id).subscribe(data=>this.emp=data);
   }
-
+  
 
   OnSubmit()
   {
