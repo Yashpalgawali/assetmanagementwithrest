@@ -15,8 +15,10 @@ import { EmployeeService } from 'src/app/Services/employee.service';
 })
 export class EditemployeeComponent implements OnInit {
 
-  constructor(private empserv :EmployeeService,private compserv : CompanyserviceService,private desigserv : DesignationService,
-    private route : ActivatedRoute) { }
+  constructor(private empserv  : EmployeeService,
+              private compserv : CompanyserviceService,
+              private desigserv: DesignationService,
+              private route    : ActivatedRoute) { }
 
   complist !: Company[];
   desiglist!: Designation[];

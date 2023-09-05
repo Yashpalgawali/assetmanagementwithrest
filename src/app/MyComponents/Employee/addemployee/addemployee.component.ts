@@ -1,7 +1,7 @@
 import { Component, NO_ERRORS_SCHEMA, NgModule, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { data } from 'jquery';
-import { Asset } from 'src/app/Models/Asset';
+import { data }   from 'jquery';
+import { Asset }  from 'src/app/Models/Asset';
 import { Department } from 'src/app/Models/Department';
 import { Employee } from 'src/app/Models/Employee';
 import { AssetService } from 'src/app/Services/asset.service';
@@ -24,22 +24,25 @@ export class AddemployeeComponent implements OnInit {
     private assetserv : AssetService,
     private deptserv : DepartmentserviceService,
     private desigserv : DesignationService,private router : Router,
-    private empserv : EmployeeService) { }
+    private empserv : EmployeeService,
+    private fb: FormBuilder
+    ) { }
   desiglist : any;
   complist  : any;
   assetlist !: Asset[]
   deptlist !: Department[]
   emp !: Employee;
 
+ 
   ngOnInit(): void {
         this.desigserv.getAllDesignations().subscribe(data=>this.desiglist=data);
         this.compserv.getAllCompanies().subscribe(data=>this.complist=data);
-        this.assetserv.getAllAssets().subscribe(data=>this.assetlist=data)
+        this.assetserv.getAllAssets().subscribe(data=>this.assetlist=data);
   }
 
   OnSubmit()
   {
-        this.empserv.saveEmployee(this.emp).subscribe(data=>this.goToViewEmployee());
+    this.empserv.saveEmployee(this.emp).subscribe(data=>this.goToViewEmployee());
   }
 
   public goToViewEmployee()

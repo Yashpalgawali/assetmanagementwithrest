@@ -8,6 +8,8 @@ import { AddcompanyComponent } from './MyComponents/Company/addcompany/addcompan
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+
 
 import { EditcompanyComponent } from './MyComponents/Company/editcompany/editcompany.component';
 import { ViewcompanyComponent } from './MyComponents/Company/viewcompany/viewcompany.component';
@@ -55,6 +57,7 @@ import { EditemployeeComponent } from './MyComponents/Employee/editemployee/edit
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    NgMultiSelectDropDownModule.forRoot(),
     NgbModule
     
   ],

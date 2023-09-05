@@ -49,9 +49,15 @@
 				</div>
 				<div class="form-group">
 					<label for="multi_assets">Assets</label> 
-					<!--<ng-select [items]="assetlist" placeholder="Select Assets" [multiple]="true" [(ngModel)]="emp.multi_assets">
-
-					</ng-select>-->
+					<ng-multiselect-dropdown
+											[placeholder]="'custom placeholder'"
+											[settings]="dropdownSettings"
+											[data]="dropdownList"
+											[(ngModel)]="selectedItems"
+											(onSelect)="onItemSelect($event)"
+											(onSelectAll)="onSelectAll($event)"
+											>
+					</ng-multiselect-dropdown>
 				</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</div>
