@@ -53,6 +53,7 @@ export class AddemployeeComponent implements OnInit {
   deptlist  !: Department[]
   emp       !: Employee;
   multi_assets : any;
+  mid :any;
   ngOnInit(): void {
         this.desigserv.getAllDesignations().subscribe(data=>this.desiglist=data);
         this.compserv.getAllCompanies().subscribe(data=>this.complist=data);
