@@ -29,6 +29,10 @@ export class CompanyserviceService {
   {
     return this.http.get<Company>(`${this.baseUrl}${cid}`);
   }
+  /*public getCompanyById(cid : any):Observable<Company>
+  {
+    return this.http.get<Company>(`${this.baseUrl}${cid}`);
+  }*/
 
   public updateCompany(company :Company):Observable<Company[]>
   {

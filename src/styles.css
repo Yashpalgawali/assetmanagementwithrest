@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */  
+@import "~@ng-select/ng-select/themes/default.theme.css";  
+
 .container {
     margin-top: 80px;
 }

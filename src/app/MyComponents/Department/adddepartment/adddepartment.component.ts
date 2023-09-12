@@ -17,19 +17,28 @@ export class AdddepartmentComponent implements OnInit {
   complist !: any;
   department: Department = new Department();
   deplist  !: any;
-  constructor(private compserv : CompanyserviceService,private deptserv : DepartmentserviceService, private route : Router) { }
+  comp_id   : any;
+  constructor(private compserv : CompanyserviceService,
+              private deptserv : DepartmentserviceService,
+              private route : Router) { }
 
   ngOnInit(): void {
-    this.compserv.getAllCompanies().subscribe(data=>{this.complist=data});
+    this.compserv.getAllCompanies().subscribe(data=>this.complist=data);
   }
 
   OnSubmit() {
-    
-    this.compserv.getCompanyById(this.department.company).subscribe(data=>this.department.company);
-    alert("Department data is "+this.department.dept_name+"\n Company id is "+this.department.company);
-    //this.deptserv.saveDepartment(this.department).subscribe(data=>{this.gotoViewDepartments()});
+    this.comp_id = this.department.company;
+   alert("submitted value ="+this.comp_id);
+   this.getCompanyByCompId(this.comp_id).subscribe(data=>this.company=data);
+   alert("Result = "+this.company.comp_name);
+  // alert("Got company by ID = "+this.department.company.comp_id+"\n Company Name "+this.department.company.comp_name);
+   //this.deptserv.saveDepartment(this.department).subscribe(data=>{this.gotoViewDepartments()});
   }
   
+  getCompanyByCompId(cid:any)
+  {
+   return this.compserv.getCompanyById(this.department.company);
+  }
   gotoViewDepartments() {
     return this.route.navigate(['viewdepartment']);
   }

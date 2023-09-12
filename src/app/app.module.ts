@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +29,7 @@ import { ViewemployeeComponent } from './MyComponents/Employee/viewemployee/view
 import { EditemployeeComponent } from './MyComponents/Employee/editemployee/editemployee.component';
 import { ViewassignedassetsComponent } from './MyComponents/AssignedAssets/viewassignedassets/viewassignedassets.component';
 import { ViewassetassignhistoryComponent } from './MyComponents/AssetAssignHistory/viewassetassignhistory/viewassetassignhistory.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -59,11 +60,15 @@ import { ViewassetassignhistoryComponent } from './MyComponents/AssetAssignHisto
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    NgSelectModule,
     NgbModule
     
   ],
   
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    NO_ERRORS_SCHEMA 
+  ]
 })
 export class AppModule { }
