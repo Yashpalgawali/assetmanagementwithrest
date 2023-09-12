@@ -18,9 +18,15 @@
 					  <label for="company">Company Name</label>
 						<select id="company" name="company" class="form-control mb-3" [(ngModel)]="department.company" >
 							<option selected disabled>Please Select Company Name</option>
+<<<<<<< HEAD
 								<option *ngFor="let comp of complist" value="{{comp.comp_id}}">
 									{{comp.comp_name}}
 								</option>		
+=======
+							<option *ngFor="let comp of complist" value="{{comp.comp_id}}">
+								{{comp.comp_name}}
+							</option>		
+>>>>>>> 96ec1ec577788df47a9998cc6eec7b5c116aa91b
 						</select>
 					</div>
 					<div class="form-group">

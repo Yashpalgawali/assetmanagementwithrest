@@ -21,8 +21,11 @@ export class ViewemployeeComponent implements OnInit {
     this.router.navigate(['editempbyid',empid]);
   }
 
+<<<<<<< HEAD
   public getAssetAssignedHistByEmpId(empid : number)
   {
     this.router.navigate(['viewassetassignedhistbyid',empid]);
   }
+=======
+>>>>>>> 96ec1ec577788df47a9998cc6eec7b5c116aa91b
 }

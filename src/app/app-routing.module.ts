@@ -18,8 +18,11 @@ import { EditassetComponent } from './MyComponents/Assets/editasset/editasset.co
 import { AddemployeeComponent } from './MyComponents/Employee/addemployee/addemployee.component';
 import { ViewemployeeComponent } from './MyComponents/Employee/viewemployee/viewemployee.component';
 import { EditemployeeComponent } from './MyComponents/Employee/editemployee/editemployee.component';
+<<<<<<< HEAD
 import { ViewassignedassetsComponent } from './MyComponents/AssignedAssets/viewassignedassets/viewassignedassets.component';
 import { ViewassetassignhistoryComponent } from './MyComponents/AssetAssignHistory/viewassetassignhistory/viewassetassignhistory.component';
+=======
+>>>>>>> 96ec1ec577788df47a9998cc6eec7b5c116aa91b
 
 
 const routes: Routes = [
@@ -40,9 +43,13 @@ const routes: Routes = [
   { path : "editassetbyid/:id" , component : EditassetComponent},
   { path : "addemployee" , component : AddemployeeComponent} ,
   { path : "viewemployee", component : ViewemployeeComponent },
+<<<<<<< HEAD
   { path : "editempbyid/:id", component : EditemployeeComponent },
   { path : "viewassignedassets", component : ViewassignedassetsComponent },
   { path : "viewassetassignedhistbyid/:id", component : ViewassetassignhistoryComponent }
+=======
+  { path : "editempbyid/:id", component : EditemployeeComponent }
+>>>>>>> 96ec1ec577788df47a9998cc6eec7b5c116aa91b
 
   
 ];

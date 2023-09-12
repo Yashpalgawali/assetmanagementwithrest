@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 import { Asset } from '../Models/Asset';
 import { Observable, ObservableLike } from 'rxjs';
 import { GlobalComponents } from '../Global-Components';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 96ec1ec577788df47a9998cc6eec7b5c116aa91b
 @Injectable({
   providedIn: 'root'
 })
@@ -32,6 +36,9 @@ export class AssetService {
   {
     return this.http.post<Asset[]>(`${this.base_url}updateasset`,asset);
   }
+<<<<<<< HEAD
 
   
+=======
+>>>>>>> 96ec1ec577788df47a9998cc6eec7b5c116aa91b
 }

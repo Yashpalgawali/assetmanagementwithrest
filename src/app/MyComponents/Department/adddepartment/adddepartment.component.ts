@@ -17,6 +17,7 @@ export class AdddepartmentComponent implements OnInit {
   complist !: any;
   department: Department = new Department();
   deplist  !: any;
+<<<<<<< HEAD
   comp_id   : any;
   constructor(private compserv : CompanyserviceService,
               private deptserv : DepartmentserviceService,
@@ -39,6 +40,21 @@ export class AdddepartmentComponent implements OnInit {
   {
    return this.compserv.getCompanyById(this.department.company);
   }
+=======
+  constructor(private compserv : CompanyserviceService,private deptserv : DepartmentserviceService, private route : Router) { }
+
+  ngOnInit(): void {
+    this.compserv.getAllCompanies().subscribe(data=>{this.complist=data});
+  }
+
+  OnSubmit() {
+    
+    this.compserv.getCompanyById(this.department.company).subscribe(data=>this.department.company);
+    alert("Department data is "+this.department.dept_name+"\n Company id is "+this.department.company);
+    //this.deptserv.saveDepartment(this.department).subscribe(data=>{this.gotoViewDepartments()});
+  }
+  
+>>>>>>> 96ec1ec577788df47a9998cc6eec7b5c116aa91b
   gotoViewDepartments() {
     return this.route.navigate(['viewdepartment']);
   }
